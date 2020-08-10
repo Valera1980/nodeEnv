@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "run-node": "node ./dist/main.js",
-    "run-node-dev": "node ./dist/main.js --env=DEV",
-    "run-node-prod": "node ./dist/main.js --env=PROD",
+    "run-node-dev": "NODE_ENV=dev node ./dist/main.js",
+    "run-node-prod": "NODE_ENV=prod node ./dist/main.js ",
+    "run-node-test": "NODE_ENV=test node ./dist/main.js ",
+    "run-node-prod-ua": "NODE_ENV=prodUa node ./dist/main.js ",
     "debug": "ndb ./dist/main.js"
   },
   "keywords": [],
@@ -21,6 +23,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
+    "dotenv-flow": "^3.2.0",
     "express": "^4.17.1",
     "ndb": "^1.1.5"
   }
